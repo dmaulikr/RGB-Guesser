@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RGBGuesser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbA-Xm-TVo">
+                                <rect key="frame" x="419" y="83" width="186" height="38"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="Show Me A Color!"/>
+                                <connections>
+                                    <action selector="setBackgroundColor" destination="BYZ-38-t0r" eventType="touchUpInside" id="inW-6N-Ujg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13b-vh-uhb">
+                                <rect key="frame" x="882" y="562" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="gxO-IC-MIK" kind="show" id="TYL-gQ-tN8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWp-qL-qdg">
+                                <rect key="frame" x="130" y="558" width="71" height="30"/>
+                                <state key="normal" title="Start Over"/>
+                                <connections>
+                                    <action selector="startOver" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEu-d6-gyo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqg-Ym-8zc">
+                                <rect key="frame" x="449" y="429" width="125" height="30"/>
+                                <state key="normal" title="Check My Color!"/>
+                                <connections>
+                                    <action selector="showResult" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pqs-vs-fLq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The RGB Guesser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsE-Pi-oVy">
+                                <rect key="frame" x="373" y="28" width="278" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZkN-84-Z1W">
+                                <rect key="frame" x="167" y="129" width="691" height="274"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4jg-Vg-M36">
+                                        <rect key="frame" x="97" y="91" width="497" height="31"/>
+                                        <color key="minimumTrackTintColor" red="0.00094304057190000004" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.00094304057189376067" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="0.00094304057190000004" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="greensliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="6jV-6n-4lE"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="yap-NP-kxV">
+                                        <rect key="frame" x="97" y="172" width="497" height="31"/>
+                                        <color key="minimumTrackTintColor" red="0.00094304057189376067" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" red="0.00094304057190000004" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="0.00094304057190000004" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="bluesliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="e0v-91-5PQ"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NlF-uM-4Ac">
+                                        <rect key="frame" x="97" y="21" width="497" height="31"/>
+                                        <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="redsliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="dyy-6v-FJT"/>
+                                        </connections>
+                                    </slider>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tdp-0A-LMC">
+                                        <rect key="frame" x="70" y="250" width="550" height="2"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuz-uQ-CVE">
+                                <rect key="frame" x="472" y="655" width="83" height="30"/>
+                                <state key="normal" title="Select Level"/>
+                                <connections>
+                                    <action selector="selectLevelClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="5z7-rh-h8o"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cUm-JZ-ct2">
+                                <rect key="frame" x="323" y="693" width="378" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="levelChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yff-Df-qD3"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOO-AT-n5W">
+                                <rect key="frame" x="526" y="606" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72O-5I-gPo">
+                                <rect key="frame" x="464" y="606" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxb-cy-zdV">
+                                <rect key="frame" x="526" y="562" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Round:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gp-W9-tbJ">
+                                <rect key="frame" x="459" y="562" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMX-JF-YBP">
+                                <rect key="frame" x="526" y="515" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DeO-Wa-Ifx">
+                                <rect key="frame" x="461" y="515" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="yap-NP-kxV" id="Lfv-ea-36E"/>
+                        <outlet property="button" destination="Iqg-Ym-8zc" id="1DP-gR-ady"/>
+                        <outlet property="greenSlider" destination="4jg-Vg-M36" id="roW-wE-YOb"/>
+                        <outlet property="levelLabel" destination="EOO-AT-n5W" id="bjp-p7-chi"/>
+                        <outlet property="levelSegmentedControl" destination="cUm-JZ-ct2" id="YHq-FM-u0k"/>
+                        <outlet property="levelSelect" destination="Kuz-uQ-CVE" id="zLL-hB-4xW"/>
+                        <outlet property="progressBar" destination="Tdp-0A-LMC" id="PNj-wU-kQu"/>
+                        <outlet property="redSlider" destination="NlF-uM-4Ac" id="TUe-zy-nuH"/>
+                        <outlet property="roundLabel" destination="Wxb-cy-zdV" id="4u0-EN-epu"/>
+                        <outlet property="scoreLabel" destination="xMX-JF-YBP" id="HUj-qA-Kdl"/>
+                        <outlet property="showButton" destination="SbA-Xm-TVo" id="1aV-oK-P8m"/>
+                        <outlet property="viewone" destination="ZkN-84-Z1W" id="SWz-eZ-afq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="410"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="yzG-li-SqA">
+            <objects>
+                <viewController id="gxO-IC-MIK" customClass="AboutViewController" customModule="RGBGuesser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ELJ-E1-1wK"/>
+                        <viewControllerLayoutGuide type="bottom" id="VNH-HB-Szp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rAT-7y-ZF6">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLG-py-R6k">
+                                <rect key="frame" x="345" y="74" width="335" height="321"/>
+                                <string key="text">RGB Guesser  How to play: Press Show Me a Color! The app will show you a color for a few seconds, and then return to the main screen, where you then need to guess the color using the red, green and blue sliders.  After adjusting the color of the background using the sliders and you think you have matched the color that you were shown, click Check My Color! and you will be given a score!  Levels: As you keep playing, the levels will increase and the game will get harder and the colors will dissapear faster!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLF-Jj-YDA">
+                                <rect key="frame" x="477" y="443" width="70" height="30"/>
+                                <state key="normal" title="Let's Play!"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="NJx-7x-v2e"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paint.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="udd-af-afr">
+                                <rect key="frame" x="392" y="545" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="http://fotonin.com/data_images/out/12/865293-paint-splatter-background.jpg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-5k-Q87">
+                                <rect key="frame" x="302" y="681" width="421" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xc5-4w-vGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="417"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paint.jpg" width="1366" height="768"/>
+    </resources>
+</document>
